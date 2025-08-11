@@ -324,9 +324,9 @@ class ModbusRTUTool(QMainWindow):
         self.serial_connected = False
         self.connect_button.setText("打开串口")
         self.status_bar.showMessage("串口已关闭")
-        self.comm_text.append("--------------------------------")
+        self.comm_text.append("-----------------")
         self.comm_text.append('<span style="color:blue">串口已关闭</span>')
-        self.result_text.append("--------------------------------")
+        self.result_text.append("-----------------")
         self.result_text.append("串口已关闭")
 
     def calculate_crc(self, data):
@@ -353,8 +353,8 @@ class ModbusRTUTool(QMainWindow):
 
             self.read_count += 1
 
-            self.comm_text.append("--------------------------------")
-            self.result_text.append("--------------------------------")
+            self.comm_text.append("-----------------")
+            self.result_text.append("-----------------")
 
             valid_addresses = [int(addr.text()) for addr in self.read_address_edits if int(addr.text()) != 0]
 
@@ -472,8 +472,8 @@ class ModbusRTUTool(QMainWindow):
 
             self.write_count += 1
 
-            self.comm_text.append("--------------------------------")
-            self.result_text.append("--------------------------------")
+            self.comm_text.append("-----------------")
+            self.result_text.append("-----------------")
 
             if "浮点型" in data_type:
                 try:
